@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style>
+/*Some styles can go here!*/
+</style>
+
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+$(function() {
+  // This is how jQuery knows when everything on the page is done loading.
+  // Code that goes in here gets run after that.
+
+  var byId = $('#this-is-an-id');
+  console.log("By ID", byId);
+
+  var byClass = $('.this-is-a-class');
+  console.log("By Class", byClass);
+
+  var byAttribute = $('input[type=text]');
+  console.log("By Attribute", byAttribute);
+
+  var byRelation = $('div > p');
+  console.log("By Relation", byRelation);
+
+  // Note that jQuery selectors always return an array of items even if you know you're just selecting
+  // one!  Most jquery functions don't care and will be called on every selected item.
+});
+
+</script>
+</head>
+
+<body>
+
+<p id='this-is-an-id'>
+  A paragraph with an id
+</p>
+
+<p class='this-is-a-class'>
+  A paragraph with a class
+</p>
+
+<input type='text' value='gonna select this by attribute!'>
+
+<div>
+  <p>
+    A paragraph inside of a div
+  </p>
+</div>
+
+
+</body>
+</html>

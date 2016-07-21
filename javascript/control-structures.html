@@ -1,0 +1,66 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+
+$(function() {
+  // This is jquery's way of ensuring that your page has loaded before
+  // executing javascript.  This is completely unneeded for this example
+  // but I'm lazy.
+
+  console.log("====IF====");
+  var randomValue = Math.random();
+  // An "If" statement just checks whether something is true and executes some code
+  if(randomValue > 0.4) {
+    console.log("Greater than 0.4");
+  } else {
+    console.log("Less than or equal to 0.4");
+  }
+
+
+  console.log("====For====");
+  // A "For" statement executes a piece of code for some pre-determined number
+  // of times.  For loops take three things:  a variable to track how many times
+  // we've gone through the loop, an ending condition, and an operation to update
+  // the iterator
+  var total = 0;
+
+  // Remember that ++ is the same as saying iterator = iterator + 1;
+  for(var iterator = 0; iterator < 5; iterator++ ) {
+    total += iterator; // This is the same as saying total = total + iterator
+  }
+  // So 0 + 1 + 2 + 3 + 4
+  console.log("Total", total); // 10
+
+  var anotherTotal = 0;
+  // For loops can also go "backwards"
+  for(var iterator =  5; iterator >= 0; iterator--) {
+    anotherTotal -= iterator; // This is the same as saying total = total - iterator
+  }
+  // So 0(starting value) - 5 - 4 - 3 - 2 - 1 - 0;
+  console.log("Another Total", anotherTotal); // -15
+
+
+  console.log("====While====");
+  // A while loop executes as long as a condition is true
+  var aList = ['one fish', 'two fish', 'red fish', 'blue fish'];
+
+  // Arrays have a property called "length" which denotes the number of items
+  // remember that while arrays are zero-indexed (so aList[0] is 'one fish'),
+  // their length represents the number of items -- so "aList" starts at length 4
+  while(aList.length > 0) {
+    console.log("Length", aList.length);
+    var item = aList.shift(); // Shift takes the first item off of an array and returns it.  This shortens the array.
+    console.log(item);
+  }
+});
+</script>
+
+</head>
+<body>
+  <h1>
+    Open the console by right-clicking and selecting "Inspect" or "Inspect Element"
+  </h1>
+</body>
+</html>

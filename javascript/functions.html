@@ -1,0 +1,47 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+function randomNumber(ceiling) {
+  // Math.random() returns a random decimal between 0 and 1.
+  // Math.floor takes a floating point number and rounds to the next-lowest
+  // integer.
+  return Math.floor(Math.random() * ceiling);
+}
+
+function doAThing() {
+  // alert is responsible for those annoying pop-ups that you always get.
+  alert("Look I did a thing!");
+}
+
+function multiplyStuff(firstThing, secondThing) {
+  return firstThing * secondThing;
+}
+
+$(function() {
+  // This is jquery's way of ensuring that your page has loaded before
+  // executing javascript.  This is completely unneeded for this example
+  // but I'm lazy.
+
+
+  // Functions are re-usable pieces of code.  Some functions take "arguments,"
+  // which are pieces of input used by the function.
+  console.log(randomNumber(3));
+  console.log(randomNumber(10000));
+
+  // Some functions don't need arguments
+  doAThing();
+  doAThing();
+
+  // Functions can be defined to take as many arguments as you like -- position is important!
+  console.log(multiplyStuff(4, 5));
+});
+</script>
+
+</head>
+<body>
+  <h1>
+    Open the console by right-clicking and selecting "Inspect" or "Inspect Element"
+  </h1>
+</body>
+</html>

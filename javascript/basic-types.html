@@ -1,0 +1,61 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+  $(function() {
+    // This is jquery's way of ensuring that your page has loaded before
+    // executing javascript.  This is completely unneeded for this example
+    // but I'm lazy.
+
+    console.log("====Boolean====");
+    var thisIsTrue = true;
+    // These are really just true or false.
+    // They can also be null or you can define them as "undefined"
+    var thisIsFalse = false;
+    var thisIsNull = null;
+    var thisIsUndefined = undefined; // You probably won't ever worry about this one.
+
+
+    // Strings are any set of characters enclosed in quotes.
+    console.log("====Strings====");
+    var string = "This is a sting";
+    var anotherString = 'you can use single or double qoutes';
+    var apostropheString = "But if you're going to use apostrophes you should double quote";
+    var escapedString = "You can also print out literal quotes by putting a backslash in front like \"this\"";
+
+    // console.log takes as many arguments as you want and will print them all out
+    console.log(string, anotherString, apostropheString, escapedString);
+
+
+    // Integers are just whole numbers.  You can do basic math with them.
+    console.log('====Integers====');
+    var integer = 1;
+    integer = integer + 2;
+    console.log('three', integer);
+    integer++; // This is a shortcut for integer = integer + 1;
+    console.log('four', integer);
+    integer--; // This is a shortcut for integer = integer - 1;
+    console.log('three again', integer);
+
+
+    // Floating point numbers are numbers with decimals.  They're very similar to integers.
+    console.log('====Floats====');
+    var float = 2.31;
+    float = float + 4;
+    console.log("six and some", float);
+    float++;
+    console.log("seven and some", float);
+    float--;
+    console.log("six and some", float);
+    console.log("Why do simple decimal numbers have a bunch of decimals and look weird?");
+    console.log("Computers are bad at representing decimals.  More here:  http://0.30000000000000004.com/");
+  });
+</script>
+
+</head>
+<body>
+  <h1>
+    Open the console by right-clicking and selecting "Inspect" or "Inspect Element"
+  </h1>
+</body>
+</html>

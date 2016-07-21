@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style>
+/*Some styles can go here!*/
+.add-or-remove {
+  color: blue;
+}
+</style>
+
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+$(function() {
+  // This is how jQuery knows when everything on the page is done loading.
+  // Code that goes in here gets run after that.
+
+  $('#add-or-remove').click(function() {
+    $('.add-or-remove').toggleClass('add-or-remove');
+  })
+
+  var isShown = true;
+  $('#show-hide').click(function() {
+    var paragraphToHide = $('.add-or-remove');
+    if(isShown) {
+      paragraphToHide.hide();
+      isShown = false;
+    } else {
+      paragraphToHide.show();
+      isShown = true;
+    }
+  })
+
+  $('.alert-text').click(function() {
+    var text = #('#alert-text').text();
+    alert(text);
+  })
+
+  $('#anInput').keyup(function() {
+    var input = $(this);
+    $('inputOutput').text(input.val());
+  })
+});
+
+</script>
+</head>
+
+<body>
+
+<div>
+<!-- The body of our page! -->
+  <p class='add-or-remove'>
+    Some text
+  </p>
+  <button id='#add-or-remove'>Change Color!</button>
+</div>
+
+<div class='show-hide'>
+  To show or hide
+  <button id='show-hide'>Disappear</button>
+</div>
+
+<div>
+  <p id='get-text'>
+    Some text in here
+  </p>
+  <button class='alert-text'>Alert Text</button>
+</div>
+
+<div>
+  <input id='anInput' val='look some text'>
+  <p id='inputOutput'>look some text</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<style>
+  div.customer-warning h1 {
+    color: red;
+  }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+function changeColor(title) {
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+  title.css('color', 'rgb(' + red + ', ' + green + ', ' + blue + ')');
+}
+
+$(function() {
+  var title = $('div.customer-warning h1');
+  $('#bedazzler').click(function() {
+    for(var i = 0; i < 1000; i += 1) {
+      setTimeout(function() { changeColor(title) }, i*100);
+    }
+  });
+});
+
+</script>
+</head>
+
+<body>
+  <div class='customer-warning'>
+    <h1> You'd better buy some Groupons </h1>
+    <h6> Or Else </h6>
+  </div>
+
+  <button id='bedazzler'>Bedazzle</button>
+</body>
+</html>

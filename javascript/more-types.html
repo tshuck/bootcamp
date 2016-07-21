@@ -1,0 +1,68 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+  $(function() {
+    // This is jquery's way of ensuring that your page has loaded before
+    // executing javascript.  This is completely unneeded for this example
+    // but I'm lazy.
+
+    console.log("====Arrays====");
+    // Arrays are basically just lists of things.  They can hold any mixed set of types
+    // including other arrays or objects.
+
+    var thisIsAnEmptyArray = [];
+    console.log("Empty", thisIsAnEmptyArray);
+    // You can 'push' things into arrays
+    thisIsAnEmptyArray.push("An Item");
+    thisIsAnEmptyArray.push(1);
+    thisIsAnEmptyArray.push(312.123);
+    console.log("An array with things", thisIsAnEmptyArray);
+
+    // Arrays are zero-indexed.  This means that the "first" element of an array
+    // is accessed by looking at the "zeroeth" item.
+    console.log(thisIsAnEmptyArray[0]); // The first item
+    console.log(thisIsAnEmptyArray[1]); // The second item
+    console.log(thisIsAnEmptyArray[2]); // The third (and last item)
+
+    // Arrays can also be initialized with values
+    var arrayWithThings = [ 'a thing', 'another thing', 2];
+    console.log(arrayWithThings);
+
+
+    console.log("====Objects====");
+    // Objects are a collection of properties that make up an abstract "thing"
+    // Use curly braces to define them!  Use commas to delimit properties!
+    // Objects can be nested!
+    var aPerson = {
+      name: "Truman Shuck",
+      job: "Making codes",
+      age: 27,
+      pet: {
+        type: "cat",
+        name: "Catballs",
+        coolnessLevel: "Very"
+      }
+    };
+
+    // Properties can be accessed in two ways -- with dots
+    console.log(aPerson.name);
+    console.log(aPerson.pet.coolnessLevel);
+
+    // Or with quotes
+    console.log(aPerson['job']);
+    console.log(aPerson['pet']['name']);
+
+    // Properties can also be changed
+    aPerson.name = 'Fake Name Woah';
+    console.log(aPerson.name);
+  });
+</script>
+
+</head>
+<body>
+  <h1>
+    Open the console by right-clicking and selecting "Inspect" or "Inspect Element"
+  </h1>
+</body>
+</html>
